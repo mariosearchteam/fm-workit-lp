@@ -1,5 +1,6 @@
 .main-nav {
   padding: var(--spacer-200) var(--spacer-200);
+  align-items: center;
   & li {
     list-style: none;
   }
@@ -50,7 +51,7 @@
 
 @media (min-width: 40rem) {
   .main-nav {
-    padding: var(--spacer-600);
+    padding: var(--spacer-200) var(--spacer-600);
   }
   .hero {
     &__title {
@@ -58,7 +59,8 @@
       margin-inline: auto;
     }
     &__image {
-      top: 110%;
+      top: 115%;
+      width: 70%;
     }
   }
   .header {
@@ -70,4 +72,16 @@
   }
 }
 @media (min-width: 60rem) {
+  .header {
+    background-position: -6rem 50%, calc(100% + 3rem) 90%;
+  }
+  .hero {
+    &__image {
+      top: 110%;
+      max-width: 50rem;
+    }
+    &__content {
+      padding: 0 var(--spacer-200) 16rem;
+    }
+  }
 }

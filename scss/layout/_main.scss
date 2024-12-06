@@ -1,11 +1,11 @@
 .features {
   position: relative;
-  padding-top: 18rem;
+  padding-top: 10rem;
 
   background-color: var(--clr-primary-100);
   & > .split {
     flex-direction: column;
-    gap: var(--spacer-200);
+    gap: var(--spacer-600);
   }
 }
 
@@ -56,6 +56,7 @@
   }
   .features > .split {
     flex-direction: column;
+    gap: 0;
   }
   .feature {
     display: flex;
@@ -63,19 +64,22 @@
     &__content {
       text-align: left;
     }
+    &__description {
+      --flow-space: var(--spacer-400);
+    }
   }
   .feature .flow-content {
-    max-width: 80%;
+    max-width: 85%;
   }
   .cta {
     position: relative;
     padding: 26rem var(--spacer-400) var(--spacer-400);
     &__portrait {
       position: absolute;
-      top: 11rem;
-      left: var(--spacer-1000);
+      top: 12rem;
+      left: var(--spacer-600);
       & img {
-        max-width: 20rem;
+        max-width: 18rem;
       }
     }
   }
@@ -87,10 +91,13 @@
   }
   .features > .container.split {
     flex-direction: row;
+    max-width: unset;
   }
   .feature {
-    text-align: center;
     padding-bottom: var(--spacer-1800);
+  }
+  .feature__content {
+    text-align: center;
   }
   .feature.flow-content {
     flex-direction: column;

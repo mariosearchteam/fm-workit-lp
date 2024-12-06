@@ -14,3 +14,9 @@
     color: var(--clr-accent);
   }
 }
+
+@media (min-width: 40rem) {
+  .button {
+    font-size: 1.2rem;
+  }
+}
