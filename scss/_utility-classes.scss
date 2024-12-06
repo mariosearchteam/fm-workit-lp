@@ -1,0 +1,28 @@
+/* Utility classes */
+.flow-content > * + * {
+  margin-top: var(--flow-space, var(--spacer-200));
+}
+
+.bg-dark {
+  background: var(--clr-primary-900);
+  color: var(--clr-neutral-100);
+}
+
+.text-accent {
+  text-decoration: underline;
+  text-decoration-color: var(--clr-accent);
+  text-decoration-thickness: 0.2rem;
+  text-underline-offset: 0.35rem;
+}
+
+.container {
+  padding: 0 var(--spacer-200);
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.split {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

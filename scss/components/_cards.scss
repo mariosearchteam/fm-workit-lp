@@ -1,0 +1,43 @@
+.card {
+  position: relative;
+  margin: -2rem var(--spacer-200) var(--spacer-800);
+  z-index: 1;
+  padding: var(--spacer-400) var(--spacer-200);
+  --flow-space: var(--spacer-400);
+  &__title {
+    @include text-preset($text-preset-2);
+    font-weight: 400;
+  }
+  &__description {
+    @include text-preset($text-preset-4);
+  }
+  &__image {
+    display: none;
+  }
+}
+
+@media (min-width: 40rem) {
+  .card {
+    position: relative;
+    max-width: 30rem;
+    margin-left: auto;
+    padding: var(--spacer-800) var(--spacer-400) var(--spacer-600);
+    text-align: left;
+  }
+  .card__image {
+    display: block;
+  }
+  .card__image svg {
+    position: absolute;
+    bottom: -7rem;
+    right: var(--spacer-200);
+  }
+}
+
+@media (min-width: 60rem) {
+  .card {
+    display: block;
+    max-width: 48rem;
+    padding: var(--spacer-600) var(--spacer-800);
+  }
+}

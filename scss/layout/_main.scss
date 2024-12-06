@@ -1,0 +1,109 @@
+.features {
+  position: relative;
+  padding-top: 18rem;
+
+  background-color: var(--clr-primary-100);
+  & > .split {
+    flex-direction: column;
+    gap: var(--spacer-200);
+  }
+}
+
+.features::after {
+  position: absolute;
+  left: 0;
+  height: var(--spacer-200);
+  bottom: -4rem;
+  width: 100%;
+  padding-bottom: 4rem;
+  content: "";
+  border-bottom-left-radius: 100% var(--spacer-400);
+  border-bottom-right-radius: 100% var(--spacer-400);
+  background-color: var(--clr-primary-100);
+}
+
+.feature {
+  &__number {
+    width: var(--spacer-600);
+    height: var(--spacer-600);
+    margin-inline: auto;
+    align-content: center;
+    border: 1px solid var(--clr-primary-900);
+    border-radius: 50%;
+    font-family: $font-fraunces;
+    font-weight: 600;
+  }
+  &__title {
+    margin-top: var(--spacer-200);
+    @include text-preset($text-preset-3);
+  }
+  &__description {
+    @include text-preset($text-preset-4);
+  }
+}
+
+.cta {
+  padding-top: var(--spacer-1800);
+  &__portrait img {
+    margin-inline: auto;
+    max-width: 17.5rem;
+  }
+}
+
+@media (min-width: 40rem) {
+  .features {
+    padding-top: 14rem;
+  }
+  .features > .split {
+    flex-direction: column;
+  }
+  .feature {
+    display: flex;
+    align-items: center;
+    &__content {
+      text-align: left;
+    }
+  }
+  .feature .flow-content {
+    max-width: 80%;
+  }
+  .cta {
+    position: relative;
+    padding: 26rem var(--spacer-400) var(--spacer-400);
+    &__portrait {
+      position: absolute;
+      top: 11rem;
+      left: var(--spacer-1000);
+      & img {
+        max-width: 20rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 60rem) {
+  .features {
+    padding-top: 24rem;
+  }
+  .features > .container.split {
+    flex-direction: row;
+  }
+  .feature {
+    text-align: center;
+    padding-bottom: var(--spacer-1800);
+  }
+  .feature.flow-content {
+    flex-direction: column;
+  }
+  .cta {
+    position: relative;
+    padding: 26rem var(--spacer-400) var(--spacer-400);
+    &__portrait {
+      top: 11rem;
+      left: -7rem;
+      & img {
+        max-width: 30rem;
+      }
+    }
+  }
+}

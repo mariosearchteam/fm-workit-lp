@@ -1,0 +1,80 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap");
+
+/* variables */
+:root {
+  /* colors */
+  --clr-accent: #44ffa1;
+  --clr-primary-900: #24053e;
+  --clr-primary-500: #584d62;
+  --clr-primary-100: #fcf8ff;
+  --clr-neutral-100: #fff;
+
+  /* typography */
+  --fs-body: 1.125rem;
+
+  /* spacing */
+  --spacer-100: 0.5rem;
+  --spacer-200: 1rem;
+  --spacer-400: 2rem;
+  --spacer-500: 2.5rem;
+  --spacer-600: 3rem;
+  --spacer-800: 4rem;
+  --spacer-1000: 5rem;
+  --spacer-1300: 7rem;
+  --spacer-1600: 8rem;
+  --spacer-3700: 18.5rem;
+}
+// Schriftfamilien
+$font-fraunces: "Fraunces", serif;
+$font-manrope: "Manrope", sans-serif;
+
+// Text Preset Variablen
+$text-preset-1: (
+  font-size: clamp(42px, 7vw, 80px),
+  line-height: 1,
+  letter-spacing: 0,
+  font-family: $font-fraunces,
+  font-weight: 600,
+);
+
+$text-preset-2: (
+  font-size: clamp(28px, 6vw, 56px),
+  line-height: 1.2,
+  letter-spacing: 0,
+  font-family: $font-fraunces,
+  font-weight: 600,
+);
+
+$text-preset-3: (
+  font-size: clamp(24px, 3.5vw, 27px),
+  line-height: 1.2,
+  letter-spacing: 0,
+  font-family: $font-fraunces,
+  font-weight: 600,
+);
+
+$text-preset-4: (
+  font-size: clamp(16px, 2.25vw, 19px),
+  line-height: 1.8,
+  letter-spacing: 0,
+  font-family: $font-manrope,
+  font-weight: 400,
+);
+
+$text-preset-5: (
+  font-size: 18px,
+  line-height: 1.5,
+  letter-spacing: 0,
+  font-family: $font-manrope,
+  font-weight: 700,
+);
+
+@mixin text-preset($preset) {
+  font-size: map-get($preset, font-size);
+  line-height: map-get($preset, line-height);
+  letter-spacing: map-get($preset, letter-spacing);
+  font-family: map-get($preset, font-family);
+  font-weight: map-get($preset, font-weight);
+}
